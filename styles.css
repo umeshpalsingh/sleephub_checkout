@@ -1466,6 +1466,10 @@
 }
 
 @media (max-width: 420.98px) {
+    
+  .top-banner {
+    padding-bottom: 10px;
+  }
 
   .top-banner-login {
     margin-left: 0;
