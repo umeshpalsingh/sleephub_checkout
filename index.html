@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout</title>
+        <!-- Bootstrap CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+            />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
+            />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="checkout.css">
+    </head>
+    <body>
+        <!----- Login Model----------------------------------------------->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login / Sign In</h5>
+                        <p class="text-secondary mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="modal-btn" type="button" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-times fa-lg"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/images/about-img1.jpg">
+                            <div>
+                                <input class="input-field" type="email" placeholder="Email Address" required>
+                                <span class="modal-mail-icon-1"><i style="color: #555;" class="fas fa-envelope"></i></span>
+                            </div>
+                            <div>
+                                <input class="input-field" type="password" placeholder="Password" required>
+                                <span class="modal-lock-icon-1"><i style="color: #555;" class="fas fa-lock"></i></span>
+                            </div>
+                            <div class="forgot-box mt-2 mb-5">
+                                <div>
+                                    <input type="checkbox">
+                                    <a class="forgot-linkOne" href="#">Keep me signed in</a>
+                                </div>
+                                <div>
+                                    <a class="forgot-linkTwo" href="#">Forgot Password?</a>
+                                </div>
+                            </div>
+                            <input class="login-btn" type="submit" value="LOG IN">
+                            <button class="cancel-btn" type="button" data-bs-dismiss="modal" aria-label="Close">CANCEL</button>
+                            <div class="forgot-register">
+                                Don't Have An Account?
+                                <a href="#">Register Here</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----- Register Model----------------------------------------------->
+
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Register / Sign Up</h5>
+                        <p class="text-secondary mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="modal-btn" type="button" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-times fa-lg"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/">
+                            <div>
+                                <input class="input-field" type="text" placeholder="Your Name*" required>
+                                <span class="modal-user-icon"><i style="color: #555;" class="fas fa-user"></i></span>
+                            </div>
+                            <div>
+                                <input class="input-field" type="email" placeholder="Email Address*" required>
+                                <span class="modal-mail-icon-2"><i style="color: #555;" class="fas fa-envelope"></i></span>
+                            </div>
+                            <div>
+                                <input class="input-field" type="password" placeholder="Password*" required>
+                                <span class="modal-lock-icon-2"><i style="color: #555;" class="fas fa-lock"></i></span>
+                            </div>
+                            <div>
+                                <input class="input-field" type="password" placeholder="Confirm Password*" required>
+                                <span class="modal-lock-icon-3"><i style="color: #555;" class="fas fa-lock"></i></span>
+                            </div>
+                            <p class="register-policy my-4">By clicking the "Sign Up" button, you are agree to our <a href="">Terms of Use</a>
+                                and <a href="">Privacy Policy</a>.
+                            </p>
+                            <input class="login-btn" type="submit" value="SIGN UP">
+                            <button class="cancel-btn" type="button" data-bs-dismiss="modal" aria-label="Close">CANCEL</button>
+                            <div class="forgot-register">
+                                Don't Have An Account?
+                                <a href="#">Log In</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----- Top Banner----------------------------------------------->
+        <div class="top-banner text-white pt-3"
+            style="background-color:
+            #15395b;">
+            <p class="me-auto top_banner_fsize top-banner-contact-margin">Contact
+                Us On
+                508-733-5951 Or akinkoko@aol.com</p>
+            <p class="top_banner_fsize top-banner-login"><i class="fas fa-user"></i>
+                <a class="text-white text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+
+                / <a class="text-white text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#Modal">Register</a>
+            </p>
+            <p class="ms-4 top_banner_fsize top-banner-cart-margin">Your
+                Cart: 0
+                Items -
+                $0.00</p>
+        </div>
+
+
+        <!----- Navbar----------------------------------------------->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img
+                        class="sleephub-logo"
+                        src="./images/main-logo.png"
+                        alt="Sleephub"
+                        />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a
+                            class="nav-link text-uppercase fw-semibold"
+                            aria-current="page"
+                            href="/index.html">Home
+                        </a>
+                        <a class="nav-link text-uppercase fw-semibold" href="/about.html">About
+                        </a>
+                        <a class="nav-link text-uppercase fw-semibold" href="/product.html">Products
+                        </a>
+                        <a class="nav-link text-uppercase fw-semibold" href="#">Blog</a>
+                        <a class="nav-link text-uppercase fw-semibold" href="#">Contact
+                        </a>
+                        <a class="nav-btn" href="#">Book a consultation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="checkout-banner">
+            <div>
+                <h2>Checkout</h2>
+                <p class="my-4 mb-5">Get your life back, lead a fresh new life</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Products</li>
+                        <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section class="checkout-section">
+            <div class="table-pack">
+                <h5>Your order</h5>
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Apply Coupon</td>
+                        <td>-$1.00</td>
+                    </tr>
+                    <tr>
+                        <td class="text-info">Subtotal</td>
+                        <td class="text-info">$9.00</td>
+                    </tr>
+                    <tr>
+                        <td>Service Tax</td>
+                        <td>$0.90</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Total</td>
+                        <td class="text-info">$9.90</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="final-payment">
+                <form>
+                    <div class="mb-3">
+                        <input type="radio" name="payment_method" id="card">
+                        <label for="card">Credit Card/Debit Card</label><br>
+                        <div class="p-logos">
+                            <img class="me-2 ms-5" src="./images/visa-logo.png" alt="visa">
+                            <img class="me-2 " src="./images/footer-img-2.png" alt="master card">
+                            <img class="me-2 " src="./images/footer-img-4.png" alt="american express">
+                        </div>
+                        <div class="card-detail">
+                            <label for="card_number" class="form-label">Card Number</label>
+                            <input type="text" class="form-control c_no" id="card_number">
+                        </div>
+                        <div class="card-detail">
+                            <label for="card_year" class="form-label">Expiration Date</label>
+                            <input type="text" class="form-control c_date" id="card_year" placeholder="MM/YY">
+                        </div>
+                        <div class="card-detail">
+                            <label for="card_cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control c_cvv" id="card_cvv">
+                        </div>
+                        <div class="my-5">
+                            <input type="radio" name="payment_method" id="paypal">
+                            <label class="ms-1" for="paypal"><img style="width: 5rem;" src="./images/paypal-logo.png" alt=""></label>
+                            <div class="ms-5">
+                                <p>PayPal Balance, eCheck, credit and more</p>
+                            </div>
+                        </div>
+                        <div class="payment-btn">
+                            <a href="#" type="submit">Complete Payment</a>
+                        </div>
+                    </div>
+                </form>
+
+            </section>
+
+            <section class="n-section">
+                <div class="n-box">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h4 class="text-uppercase mb-4">Newsletter</h4>
+                            <h2 class="text-white mb-4 n-main">Subscribe to our newsletter for latest news, update and more</h2>
+                            <p class="news-des">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <form>
+                                <input class="news-email" type="email" placeholder="Enter your email">
+                                <input class="news-submit" type="submit" value="SUBSCRIBE">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer text-white">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="footer-col-1">
+                            <img class="mb-4" src="./images/footer-logo.png" alt="sleephub">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In voluptatem official modi
+                                voluptatum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-col-2">
+                            <h2>Quick Links</h2>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="#">Membership</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-col-3">
+                            <h2>Contact Us</h2>
+                            <p>
+                                C/O Medical Psychotherapy LLC
+                                209 West Central Street,
+                                Unit 209, Natick
+                                MA 01760
+                            </p>
+                            <p>Call <a href="tel:508-733-5951">508-733-5951</a> </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-col-4">
+                            <a class="footer-mail" href="mailto:akinkoko@aol.com">akinkoko@aol.com</a>
+                            <ul class="footer-icons">
+                                <li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube fa-lg"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-9">
+                        <p class="copyright">
+                            Copyright © 2021 Sleep Solution Hub. All Rights Reserve. Designed and Developed By Ogrelogic. Privacy Policy | Terms
+                            Of Use.
+                        </p>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="pay-logo-box">
+                            <img class="pay-logo" src="./images/footer-img-1.png" alt="pay_logo">
+                            <img class="pay-logo" src="./images/footer-img-2.png" alt="pay_logo">
+                            <img class="pay-logo" src="./images/footer-img-3.png" alt="pay_logo">
+                            <img class="pay-logo" src="./images/footer-img-4.png" alt="pay_logo">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Bootstrap Script -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                crossorigin="anonymous">
+        </script>
+        </body>
+    </html>
